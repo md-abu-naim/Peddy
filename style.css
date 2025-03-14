@@ -23,3 +23,22 @@ nav{
     align-items: center;
     font-size: 32px;
 }
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+ul > li{
+    list-style: none;
+    color: #13131399;
+}
+
+.account{
+    border: 1px solid #13131399;
+    border-radius: 100%;
+    padding: 8px;
+    color: #13131399;
+}
