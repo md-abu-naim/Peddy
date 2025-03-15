@@ -43,6 +43,39 @@ ul > li{
     color: #13131399;
 }
 
+/* Banner */
+.banner-section{
+    display: flex;
+    margin: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    text-align: center;
+    width: 752px;
+}
+
+.sub-title{
+    color: #13131399;
+    font-weight: 700;
+}
+
+.title{
+    font-size: 72px;
+    font-weight: 900;
+    padding: 24px;
+}
+
+.btn{
+    background-color: #0E7A81;
+    border-radius: 8px;
+    border: none;
+    padding: 16px;
+    color: white;
+    margin: 24px 0px;
+}
 
 
 
@@ -55,5 +88,9 @@ ul > li{
 
     .account{
         display: none;
+    }
+
+    i{
+        display: block;
     }
 }
