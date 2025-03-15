@@ -77,6 +77,19 @@ ul > li{
     margin: 24px 0px;
 }
 
+/* Adopt Section */
+.adopt{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adopt-content{
+    text-align: center;
+    width:60%;
+}
+
 
 
 /* Responsive for mobile device */
