@@ -42,3 +42,18 @@ ul > li{
     padding: 8px;
     color: #13131399;
 }
+
+
+
+
+/* Responsive for mobile device */
+@media screen and (max-width: 600px) {
+    /* Navber */
+    ul{
+        display: none;
+    }
+
+    .account{
+        display: none;
+    }
+}
