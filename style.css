@@ -100,4 +100,13 @@ ul > li{
     }
 
     /* Banner */
+    .banner{
+        width: 100%;
+    }
+
+    .title{
+        font-size: 35px;
+        font-weight: 900;
+        padding: 10px 0;
+    }
 }
