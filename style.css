@@ -54,7 +54,7 @@ ul > li{
 
 .banner{
     text-align: center;
-    width: 752px;
+    width: 70%;
 }
 
 .sub-title{
@@ -81,6 +81,11 @@ ul > li{
 
 /* Responsive for mobile device */
 @media screen and (max-width: 600px) {
+    /* Body */
+    body{
+        padding: 5px;
+    }
+
     /* Navber */
     ul{
         display: none;
@@ -90,7 +95,9 @@ ul > li{
         display: none;
     }
 
-    i{
+    .fa-solid{
         display: block;
     }
+
+    /* Banner */
 }
