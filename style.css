@@ -1,42 +1,42 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: white;
     position: relative;
     padding: 20px;
 }
 
 /* Navber */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo{
+.logo {
     display: flex;
     gap: 5px;
     align-items: center;
     font-size: 32px;
 }
 
-ul{
+ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
 }
 
-ul > li{
+ul>li {
     list-style: none;
     color: #13131399;
 }
 
-.account{
+.account {
     border: 1px solid #13131399;
     border-radius: 100%;
     padding: 8px;
@@ -44,7 +44,7 @@ ul > li{
 }
 
 /* Banner */
-.banner-section{
+.banner-section {
     display: flex;
     margin: 60px;
     flex-direction: column;
@@ -52,23 +52,23 @@ ul > li{
     justify-content: center;
 }
 
-.banner{
+.banner {
     text-align: center;
     width: 70%;
 }
 
-.sub-title{
+.sub-title {
     color: #13131399;
     font-weight: 700;
 }
 
-.title{
+.title {
     font-size: 72px;
     font-weight: 900;
     padding: 24px;
 }
 
-.btn{
+.btn {
     background-color: #0E7A81;
     border-radius: 8px;
     border: none;
@@ -78,52 +78,53 @@ ul > li{
 }
 
 /* Adopt Section */
-.adopt{
+.adopt {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.adopt-content{
+.adopt-content {
     text-align: center;
-    width:60%;
+    width: 60%;
 }
 
 
 
 /* Responsive for mobile device */
 @media screen and (max-width: 600px) {
+
     /* Body */
-    body{
+    body {
         padding: 5px;
     }
 
     /* Navber */
-    ul{
+    ul {
         display: none;
     }
 
-    .account{
+    .account {
         display: none;
     }
 
-    .fa-solid{
+    .fa-solid {
         display: block;
     }
 
     /* Banner */
-    .banner{
+    .banner {
         width: 100%;
     }
 
-    .title{
+    .title {
         font-size: 35px;
         font-weight: 900;
         padding: 10px 0;
     }
 
-    .bnr-img{
+    .bnr-img {
         width: 100%;
     }
 }
