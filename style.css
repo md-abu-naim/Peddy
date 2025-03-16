@@ -91,6 +91,19 @@ ul>li {
     width: 60%;
 }
 
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 48px;
+}
+
+.category-btn{
+    padding: 13px 50px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
 
 
 /* Responsive for mobile device */
