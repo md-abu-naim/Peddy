@@ -79,7 +79,6 @@ ul>li {
 
 /* Adopt Section */
 .adopt {
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +95,7 @@ ul>li {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 48px;
+    margin: 48px 0px 0px 0px;
 }
 
 .category-btn{
