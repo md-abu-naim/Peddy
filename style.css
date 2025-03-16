@@ -83,6 +83,7 @@ ul>li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .adopt-content {
@@ -102,6 +103,13 @@ ul>li {
     padding: 13px 50px;
     border-radius: 8px;
     border: 1px solid gray;
+}
+
+.best-deal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 
