@@ -163,7 +163,7 @@ main{
     background-color: #F9F7F3;
     border-radius: 8px;
     padding: 32px;
-    /* display: none; */
+    display: none;
 }
 
 .modal-img{
