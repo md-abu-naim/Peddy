@@ -117,13 +117,15 @@ ul>li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid black;
 }
 
 .card-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    flex: 2;
+    width: 60%;
     gap: 24px;
+    border: #0E7A81 1px solid;
 }
 
 .card{
@@ -143,7 +145,12 @@ ul>li {
 .image-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 8px;
+    /* width: 40%; */
+    border: #13131399 1px solid;
+    margin-top: 0px;
+    padding-top: 0;
+    margin-bottom: 34%;
 }
 
 
