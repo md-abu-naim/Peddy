@@ -199,10 +199,13 @@ ul>li {
 
     .card-container {
         grid-template-columns: 1fr;
+    width: 100%;
+    /* gap: 24px; */
     }
 
     .image-container {
         margin-bottom: 0%;
+        width: 100%;
     }
     
 }
