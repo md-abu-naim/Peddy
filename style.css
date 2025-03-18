@@ -112,35 +112,35 @@ ul>li {
     width: 100%;
 }
 
-.container{
+.container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card-container{
+.card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 60%;
     gap: 24px;
 }
 
-.card{
+.card {
     border: 1px solid rgba(19, 19, 19, 0.1);
     border-radius: 8px;
     padding: 20px;
 
 }
 
-.card-content{
+.card-content {
     display: flex;
     align-items: center;
     gap: 5px;
     color: rgba(19, 19, 19, 0.7);
 }
 
-.image-container{
+.image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
@@ -187,4 +187,22 @@ ul>li {
     .bnr-img {
         width: 100%;
     }
+
+    /* Best for deal */
+    .category{
+        overflow-x: scroll;
+    }
+    .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-container {
+        margin-bottom: 0%;
+    }
+    
 }
