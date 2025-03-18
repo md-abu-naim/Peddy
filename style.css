@@ -146,10 +146,6 @@ ul>li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    /* width: 40%; */
-    border: #13131399 1px solid;
-    margin-top: 0px;
-    padding-top: 0;
     margin-bottom: 34%;
 }
 
