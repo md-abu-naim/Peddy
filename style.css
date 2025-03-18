@@ -77,6 +77,10 @@ ul>li {
     margin: 24px 0px;
 }
 
+main{
+    position: relative;
+}
+
 /* Adopt Section */
 .adopt {
     display: flex;
@@ -148,6 +152,41 @@ ul>li {
     border: 1px solid rgba(19, 19, 19, 0.1);
     border-radius: 8px;
     padding: 20px;
+}
+
+.modal{
+    width: 600px;
+    position: fixed;
+    top: 20px;
+    left: 400px;
+    height: 750px;
+    background-color: #F9F7F3;
+    border-radius: 8px;
+    padding: 32px;
+    /* display: none; */
+}
+
+.modal-img{
+    width: 536px;
+    padding-bottom: 24px;
+}
+
+.modal-content{
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    padding: 6px 0;
+}
+
+.modal-btn{
+    width: 100%;
+    background-color: #0E7A811A;
+    color:#0E7A81;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 900;
+    margin-top: 5px;
 }
 
 
