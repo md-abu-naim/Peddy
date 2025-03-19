@@ -77,7 +77,7 @@ ul>li {
     margin: 24px 0px;
 }
 
-main{
+main {
     position: relative;
 }
 
@@ -144,7 +144,7 @@ main{
     color: rgba(19, 19, 19, 0.7);
 }
 
-.card-btn{
+.card-btn {
     padding: 16px;
     border-radius: 8px;
     color: #0E7A81;
@@ -162,7 +162,7 @@ main{
     padding: 20px;
 }
 
-.modal{
+.modal {
     width: 600px;
     position: fixed;
     top: 20px;
@@ -174,22 +174,22 @@ main{
     display: none;
 }
 
-.modal-img{
+.modal-img {
     width: 536px;
     padding-bottom: 24px;
 }
 
-.modal-content{
+.modal-content {
     display: flex;
     align-items: center;
     gap: 72px;
     padding: 6px 0;
 }
 
-.modal-btn{
+.modal-btn {
     width: 100%;
     background-color: #0E7A811A;
-    color:#0E7A81;
+    color: #0E7A81;
     padding: 16px;
     border: none;
     border-radius: 8px;
@@ -236,9 +236,10 @@ main{
     }
 
     /* Best for deal */
-    .category{
+    .category {
         overflow-x: scroll;
     }
+
     .container {
         flex-direction: column;
         gap: 12px;
@@ -246,13 +247,13 @@ main{
 
     .card-container {
         grid-template-columns: 1fr;
-    width: 100%;
-    /* gap: 24px; */
+        width: 100%;
+        /* gap: 24px; */
     }
 
     .image-container {
         margin-bottom: 0%;
         width: 100%;
     }
-    
+
 }
