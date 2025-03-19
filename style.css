@@ -144,6 +144,14 @@ main{
     color: rgba(19, 19, 19, 0.7);
 }
 
+.card-btn{
+    padding: 16px;
+    border-radius: 8px;
+    color: #0E7A81;
+    font-weight: 900;
+    border: 1px solid #0E7A8126;
+}
+
 .image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
