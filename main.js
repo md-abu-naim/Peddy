@@ -50,16 +50,16 @@ const btnDataLoad = () => {
     })
 }
 
-// const displayBtn = (btns) => {
-//     const btnContainer = document.getElementById('category')
-//     btns.forEach(btn => {
-//         const button = document.createElement('button')
-//         button.classList.add('category-btn')
-//         button.innerHTML = ` <img src=${btn.category_icon} alt="">
-//         <h1>${btn.category}</h1>`
-//         btnContainer.appendChild(button)
-//     })
-// }
+const displayBtn = (btns) => {
+    const btnContainer = document.getElementById('category')
+    btns.forEach(btn => {
+        const button = document.createElement('button')
+        button.classList.add('category-btn')
+        button.innerHTML = ` <img src=${btn.category_icon} alt="">
+        <h1>${btn.category}</h1>`
+        btnContainer.appendChild(button)
+    })
+}
 
 dataLoad()
 btnDataLoad()
