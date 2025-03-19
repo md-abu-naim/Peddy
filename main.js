@@ -10,7 +10,6 @@ const dataLoad = () => {
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
     pets.forEach(pet => {
-        console.log(pet);
         const div = document.createElement('div')
         div.classList.add('card')
 
@@ -43,4 +42,24 @@ const displayPets = (pets) => {
     })
 }
 
+const btnDataLoad = () => {
+    fetch('https://openapi.programming-hero.com/api/peddy/categories')
+    .then(res => res.json())
+    .then(data => {
+        displayBtn(data.categories);
+    })
+}
+
+// const displayBtn = (btns) => {
+//     const btnContainer = document.getElementById('category')
+//     btns.forEach(btn => {
+//         const button = document.createElement('button')
+//         button.classList.add('category-btn')
+//         button.innerHTML = ` <img src=${btn.category_icon} alt="">
+//         <h1>${btn.category}</h1>`
+//         btnContainer.appendChild(button)
+//     })
+// }
+
 dataLoad()
+btnDataLoad()
