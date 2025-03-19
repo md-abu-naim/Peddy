@@ -51,8 +51,8 @@ const displayPets = (pets) => {
 const handlLikeBtn = (pet) => {
     const imgContainer = document.getElementById('image-container')
     const img = document.createElement('img')
-    img.width = 125; // ইমেজের ওয়াইড সেট করা
-    img.src = pet.image; // ইমেজ সোর্স সেট করা
+    img.width = 125;
+    img.src = pet.image;
     img.alt = "Liked Pet"; 
 imgContainer.appendChild(img)
 }
