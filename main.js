@@ -33,21 +33,36 @@ const displayPets = (pets) => {
                         <p>Price : ${pet.price}$</p>
                     </div>
                     <div>
-                        <button style="padding: 16px; border-radius: 4px; border: 1px solid #0E7A8126;"><i class="fa-solid fa-thumbs-up"></i></button>
+                        <button class="likeBtn" style="padding: 16px; border-radius: 4px; border: 1px solid #0E7A8126;"><i class="fa-solid fa-thumbs-up"></i></button>
                         <button class="card-btn">Adopt</button>
                         <button class="card-btn">Details</button>
                     </div>
                         `
+
+        const like = div.querySelector('.likeBtn');
+        like.addEventListener('click', () => handlLikeBtn(pet));
+
         petsContainer.appendChild(div)
+
     })
+}
+
+
+const handlLikeBtn = (pet) => {
+    const imgContainer = document.getElementById('image-container')
+    const img = document.createElement('img')
+    img.width = 125; // ইমেজের ওয়াইড সেট করা
+    img.src = pet.image; // ইমেজ সোর্স সেট করা
+    img.alt = "Liked Pet"; 
+imgContainer.appendChild(img)
 }
 
 const btnDataLoad = () => {
     fetch('https://openapi.programming-hero.com/api/peddy/categories')
-    .then(res => res.json())
-    .then(data => {
-        displayBtn(data.categories);
-    })
+        .then(res => res.json())
+        .then(data => {
+            displayBtn(data.categories);
+        })
 }
 
 const displayBtn = (btns) => {
