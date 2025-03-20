@@ -3,7 +3,10 @@ const dataLoad = () => {
         .then(res => res.json())
         .then(data => {
             const pets = data.pets
-            displayPets(pets)
+            setTimeout(() => {
+                displayPets(pets)
+                handleSpinner('none')
+            },2000 )
         })
 }
 
@@ -153,6 +156,10 @@ const displayBtn = (btns) => {
         <h1>${btn.category}</h1>`
         btnContainer.appendChild(button)
     })
+}
+
+const handleSpinner = (status) => {
+    document.getElementById('spinner').style.display = status
 }
 
 dataLoad()
