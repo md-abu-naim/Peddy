@@ -36,7 +36,7 @@ const displayPets = (pets) => {
                     <div>
                         <button class="likeBtn" style="padding: 16px; border-radius: 4px; border: 1px solid #0E7A8126;"><i class="fa-solid fa-thumbs-up"></i></button>
                         <button class="adoptButton card-btn">Adopt</button>
-                        <button class="card-btn">Details</button>
+                        <button class="detailsButton card-btn">Details</button>
                     </div>
                         `
 
@@ -48,6 +48,10 @@ const displayPets = (pets) => {
         adoptBtn.addEventListener('click', function() {
             startAdoption(this)
         })
+
+        // Details Button
+        const Details = div.querySelector('.detailsButton')
+        Details.addEventListener('click', () => handleDetails(pet))
 
 
         petsContainer.appendChild(div)
@@ -78,6 +82,16 @@ const startAdoption = (button) => {
         }
     }, 1000)
 }
+
+const handleDetails = (pet) => {
+    const modal = document.getElementById('modal')
+    modal.classList.remove('hidden')    
+}
+
+// const closeModal = () => {
+//     const modal = document.getElementById('modal')
+//     modal.classList.add('hidden')
+// }
 
 const btnDataLoad = () => {
     fetch('https://openapi.programming-hero.com/api/peddy/categories')
