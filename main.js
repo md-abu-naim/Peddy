@@ -88,10 +88,10 @@ const handleDetails = (pet) => {
     modal.classList.remove('hidden')    
 }
 
-// const closeModal = () => {
-//     const modal = document.getElementById('modal')
-//     modal.classList.add('hidden')
-// }
+const closeModal = () => {
+    const modal = document.getElementById('modal')
+    modal.classList.add('hidden')
+}
 
 const btnDataLoad = () => {
     fetch('https://openapi.programming-hero.com/api/peddy/categories')
