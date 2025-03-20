@@ -10,7 +10,7 @@ const dataLoad = () => {
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
     petsContainer.innerHTML = '';
-        pets.forEach(pet => {
+    pets.forEach(pet => {
         const div = document.createElement('div')
         div.classList.add('card')
 
@@ -45,7 +45,7 @@ const displayPets = (pets) => {
 
         // Adopt Button Event
         const adoptBtn = div.querySelector('.adoptButton')
-        adoptBtn.addEventListener('click', function() {
+        adoptBtn.addEventListener('click', function () {
             startAdoption(this)
         })
 
@@ -73,10 +73,10 @@ const startAdoption = (button) => {
     button.disabled = true;
 
     let interval = setInterval(() => {
-        if(countdown > 0) {
+        if (countdown > 0) {
             button.innerText = countdown
             countdown--
-        }else{
+        } else {
             clearInterval(interval)
             button.innerText = "Adopted"
         }
@@ -85,7 +85,46 @@ const startAdoption = (button) => {
 
 const handleDetails = (pet) => {
     const modal = document.getElementById('modal')
-    modal.classList.remove('hidden')    
+    modal.classList.remove('hidden')
+
+    const div = document.createElement('div')
+    div.classList.add('modal')
+    div.innerHTML = `
+    <div class="modal">
+                <img class="modal-img" src=${pet.image} alt="">
+                <h3>${pet.pet_name}</h3>
+                <div class="modal-content">
+                    <div class="card-content">
+                        <i class="fa-solid fa-minimize"></i>
+                        <p>Breed: ${pet.breed}</p>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>Birth: ${pet.date_of_birth}</p>
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="card-content">
+                        <i class="fa-solid fa-mercury"></i>
+                        <p>Gender: ${pet.gender}</p>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <p>Price : ${pet.price}$</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                        <i class="fa-solid fa-mercury"></i>
+                        <p>Vaccinated status: ${pet.gender}</p>
+                    </div>
+    
+                <h5>Details Information</h5>
+                <p>${pet.pet_details}</p>
+    
+                <button onclick="closeModal()" class="modal-btn">Cancel</button>
+            </div>
+    `
+    modal.appendChild(div)
 }
 
 const closeModal = () => {
