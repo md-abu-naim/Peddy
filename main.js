@@ -9,7 +9,8 @@ const dataLoad = () => {
 
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
-    pets.forEach(pet => {
+    petsContainer.innerHTML = '';
+        pets.forEach(pet => {
         const div = document.createElement('div')
         div.classList.add('card')
 
@@ -34,7 +35,7 @@ const displayPets = (pets) => {
                     </div>
                     <div>
                         <button class="likeBtn" style="padding: 16px; border-radius: 4px; border: 1px solid #0E7A8126;"><i class="fa-solid fa-thumbs-up"></i></button>
-                        <button class="card-btn">Adopt</button>
+                        <button class="adoptButton card-btn">Adopt</button>
                         <button class="card-btn">Details</button>
                     </div>
                         `
@@ -42,19 +43,40 @@ const displayPets = (pets) => {
         const like = div.querySelector('.likeBtn');
         like.addEventListener('click', () => handlLikeBtn(pet));
 
+        // Adopt Button Event
+        const adoptBtn = div.querySelector('.adoptButton')
+        adoptBtn.addEventListener('click', function() {
+            startAdoption(this)
+        })
+
+
         petsContainer.appendChild(div)
 
     })
 }
-
 
 const handlLikeBtn = (pet) => {
     const imgContainer = document.getElementById('image-container')
     const img = document.createElement('img')
     img.width = 125;
     img.src = pet.image;
-    img.alt = "Liked Pet"; 
-imgContainer.appendChild(img)
+    img.alt = "Liked Pet";
+    imgContainer.appendChild(img)
+}
+
+const startAdoption = (button) => {
+    let countdown = 3;
+    button.disabled = true;
+
+    let interval = setInterval(() => {
+        if(countdown > 0) {
+            button.innerText = countdown
+            countdown--
+        }else{
+            clearInterval(interval)
+            button.innerText = "Adopted"
+        }
+    }, 1000)
 }
 
 const btnDataLoad = () => {
