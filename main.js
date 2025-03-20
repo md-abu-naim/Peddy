@@ -13,6 +13,15 @@ const dataLoad = () => {
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
     petsContainer.innerHTML = '';
+    // if(pets.length === 0){
+    //     petsContainer.innerHTML = `<div>
+    //                 <img src="./images/error.webp" alt="">
+    //                 <h2>No Information Available</h2>
+    //                 <p>It is a long established fact that a reader will be distracted by the readable content of a page
+    //                     when looking at
+    //                     its layout. The point of using Lorem Ipsum is that it has a.</p>
+    //             </div>`
+    // }
     pets.forEach(pet => {
         const div = document.createElement('div')
         div.classList.add('card')
@@ -154,13 +163,23 @@ const displayBtn = (btns) => {
         button.classList.add('category-btn')
         button.innerHTML = ` <img src=${btn.category_icon} alt="">
         <h1>${btn.category}</h1>`
+
+        button.addEventListener('click', () => loadPetsCategory(btn.category))
+
         btnContainer.appendChild(button)
     })
+}
+
+const loadPetsCategory = (category) => {
+    fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
+    .then(res => res.json()) 
+    .then(data => displayPets(data.data))
 }
 
 const handleSpinner = (status) => {
     document.getElementById('spinner').style.display = status
 }
 
+// loadPetsCategory()
 dataLoad()
 btnDataLoad()
