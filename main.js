@@ -6,14 +6,19 @@ const dataLoad = () => {
             setTimeout(() => {
                 displayPets(pets)
                 handleSpinner('none')
-            },2000 )
+            }, 2000)
         })
 }
+
+let allPets = []
 
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
     petsContainer.innerHTML = '';
-    if(pets.length === 0){
+
+    allPets = pets
+
+    if (pets.length === 0) {
         petsContainer.innerHTML = `<div>
                     <img src="./images/error.webp" alt="">
                     <h2>No Information Available</h2>
@@ -69,6 +74,13 @@ const displayPets = (pets) => {
         petsContainer.appendChild(div)
 
     })
+}
+
+const sortByPrice = () => {
+    if (!allPets || allPets.length === 0) return;
+
+    const sortedPets = [...allPets].sort((a, b) => (b.price || 0) - (a.price || 0))
+    displayPets(sortedPets)
 }
 
 const handlLikeBtn = (pet) => {
@@ -172,14 +184,15 @@ const displayBtn = (btns) => {
 
 const loadPetsCategory = (category) => {
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
-    .then(res => res.json()) 
-    .then(data => displayPets(data.data))
+        .then(res => res.json())
+        .then(data => displayPets(data.data))
 }
 
 const handleSpinner = (status) => {
     document.getElementById('spinner').style.display = status
 }
 
-// loadPetsCategory()
+document.getElementById('sort').addEventListener('click', sortByPrice)
+
 dataLoad()
 btnDataLoad()
