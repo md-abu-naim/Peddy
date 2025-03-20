@@ -87,39 +87,43 @@ const handleDetails = (pet) => {
     const modal = document.getElementById('modal')
     modal.classList.remove('hidden')
 
+    const getValue = (value, placeholder = 'Not Available') => value ? value : placeholder
+
+    modal.innerHTML = ''
+
     const div = document.createElement('div')
     div.classList.add('modal')
     div.innerHTML = `
     <div class="modal">
-                <img class="modal-img" src=${pet.image} alt="">
-                <h3>${pet.pet_name}</h3>
+                <img class="modal-img" src=${getValue(pet.image, 'placeholder.jpg')} alt="">
+                <h3>${getValue(pet.pet_name)}</h3>
                 <div class="modal-content">
                     <div class="card-content">
                         <i class="fa-solid fa-minimize"></i>
-                        <p>Breed: ${pet.breed}</p>
+                        <p>Breed: ${getValue(pet.breed)}</p>
                     </div>
                     <div class="card-content">
                         <i class="fa-solid fa-calendar-days"></i>
-                        <p>Birth: ${pet.date_of_birth}</p>
+                        <p>Birth: ${getValue(pet.date_of_birth)}</p>
                     </div>
                 </div>
                 <div class="modal-content">
                     <div class="card-content">
                         <i class="fa-solid fa-mercury"></i>
-                        <p>Gender: ${pet.gender}</p>
+                        <p>Gender: ${getValue(pet.gender)}</p>
                     </div>
                     <div class="card-content">
                         <i class="fa-solid fa-dollar-sign"></i>
-                        <p>Price : ${pet.price}$</p>
+                        <p>Price : ${getValue(pet.price)}$</p>
                     </div>
                 </div>
                 <div class="card-content">
                         <i class="fa-solid fa-mercury"></i>
-                        <p>Vaccinated status: ${pet.gender}</p>
+                        <p>Vaccinated status: ${getValue(pet.gender)}</p>
                     </div>
     
                 <h5>Details Information</h5>
-                <p>${pet.pet_details}</p>
+                <p>${getValue(pet.pet_details)}</p>
     
                 <button onclick="closeModal()" class="modal-btn">Cancel</button>
             </div>
