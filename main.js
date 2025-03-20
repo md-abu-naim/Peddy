@@ -13,15 +13,15 @@ const dataLoad = () => {
 const displayPets = (pets) => {
     const petsContainer = document.getElementById('card-container')
     petsContainer.innerHTML = '';
-    // if(pets.length === 0){
-    //     petsContainer.innerHTML = `<div>
-    //                 <img src="./images/error.webp" alt="">
-    //                 <h2>No Information Available</h2>
-    //                 <p>It is a long established fact that a reader will be distracted by the readable content of a page
-    //                     when looking at
-    //                     its layout. The point of using Lorem Ipsum is that it has a.</p>
-    //             </div>`
-    // }
+    if(pets.length === 0){
+        petsContainer.innerHTML = `<div>
+                    <img src="./images/error.webp" alt="">
+                    <h2>No Information Available</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at
+                        its layout. The point of using Lorem Ipsum is that it has a.</p>
+                </div>`
+    }
     pets.forEach(pet => {
         const div = document.createElement('div')
         div.classList.add('card')
